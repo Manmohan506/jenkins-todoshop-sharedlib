@@ -6,7 +6,7 @@ pipeline{
         //disableconcurrentBuilds()
     //}
     environment{
-        PROJECT_NAME ="Todoshop"
+        PROJECT_NAME ="todoshop"
         UBUNTU_SSH_CRED = credentials('ubuntu_ssh')
     }
     triggers { cron('H */4 * * 1-5') }
@@ -42,7 +42,7 @@ pipeline{
         }
         stage("TWO"){
             environment{
-                PROJECT_NAME="Todoshop"
+                PROJECT_NAME="todoshop"
 
             }
             steps{
