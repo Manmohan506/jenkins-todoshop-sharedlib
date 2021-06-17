@@ -29,7 +29,7 @@ for (i in 0..count) {
           }
           'branches' {
             'hudson.plugins.git.BranchSpec' {
-              'name'('*/tags/*')
+              'name'(https://github.com/Manmohan506/jenkins-todoshop-sharedlib.git)
             }
           }
         }
