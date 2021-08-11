@@ -1,12 +1,17 @@
 def call(Map params = [:] ) {
     def args = []
     args << params
-    
+
     pipeline {
-        agent {
-            label "${args.SLAVE_LABEL}"
+      agent {
+        node {
+        label "${args.SLAVE_LABEL}"
         }
+      }
     
+        triggers {
+          pollSCM('* * * * 1-5') 
+        }
         environment {
             COMPONENT ="${args.COMPONENT}"
             PROJECT_NAME = "${args.PROJECT_NAME}"
