@@ -1,5 +1,7 @@
 def call(Map params = [:] ) {
-    def args = []
+    def args = [
+           SLAVE_LABEL : "DOCKER"
+    ]
     args << params
 
     pipeline {
